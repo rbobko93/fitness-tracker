@@ -1,6 +1,7 @@
 <section>
   <form fxLayout="column"
         fxLayoutAlign="center center"
+        fxLayoutGap="10px"
         #f="ngForm"
         (ngSubmit)="onSubmit(f)">
     <mat-form-field>
@@ -54,6 +55,11 @@
       color="primary">
       Agree to Terms and Conditions
     </mat-checkbox>
-    <button type="submit" mat-raised-button color="primary">Submit</button>
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      [disabled]="f.invalid">Submit
+    </button>
   </form>
 </section>
